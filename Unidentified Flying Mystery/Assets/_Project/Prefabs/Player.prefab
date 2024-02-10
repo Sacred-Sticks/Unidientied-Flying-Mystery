@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2560395707521910889
+--- !u!1 &2476150645014285717
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,94 +8,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7161317968572594310}
-  - component: {fileID: 4781816927392146193}
+  - component: {fileID: 7999176512139731070}
   m_Layer: 0
-  m_Name: Left Thruster
+  m_Name: Camera Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7161317968572594310
+--- !u!4 &7999176512139731070
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2560395707521910889}
+  m_GameObject: {fileID: 2476150645014285717}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 387248272364055389}
-  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!114 &4781816927392146193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2560395707521910889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13237d53eff22454d865db97b637943d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thrusterInput: {fileID: 11400000, guid: e7ad8cdd39754a748b0743efe0d625da, type: 2}
-  powerMultiplier: 0.5
-  forcePlacement: {x: 0, y: 1, z: 0}
-  rotationDirection: -1
---- !u!1 &3265113485113660566
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5858808420429720491}
-  - component: {fileID: 4230052328575111198}
-  m_Layer: 0
-  m_Name: Right Thruster
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5858808420429720491
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3265113485113660566}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 387248272364055389}
-  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
---- !u!114 &4230052328575111198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3265113485113660566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13237d53eff22454d865db97b637943d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thrusterInput: {fileID: 11400000, guid: f6642388ba2cbf443b8dd697cae67ac9, type: 2}
-  powerMultiplier: 0.5
-  forcePlacement: {x: 0, y: 1, z: 0}
-  rotationDirection: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5355155790150799712
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,8 +63,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1442495297136660114}
-  - {fileID: 7161317968572594310}
-  - {fileID: 5858808420429720491}
+  - {fileID: 3528624737378385106}
+  - {fileID: 7999176512139731070}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2222642240150957864
@@ -142,7 +77,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 2
-  m_AngularDrag: 1.5
+  m_AngularDrag: 3.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -157,7 +92,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!114 &4763569349480438695
 MonoBehaviour:
@@ -172,6 +107,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Identifier>k__BackingField: 1
+--- !u!1 &5839606739547075566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3528624737378385106}
+  - component: {fileID: 1600957918546769326}
+  m_Layer: 0
+  m_Name: Thursters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3528624737378385106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839606739547075566}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 387248272364055389}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1600957918546769326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839606739547075566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4013c8894ed7450fa4efc022f756ce29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftThrustInput: {fileID: 11400000, guid: e7ad8cdd39754a748b0743efe0d625da, type: 2}
+  rightThrustInput: {fileID: 11400000, guid: f6642388ba2cbf443b8dd697cae67ac9, type: 2}
+  altitudeInput: {fileID: 11400000, guid: e3fe6214baa4e824c9b0716f15921da7, type: 2}
+  thrustForce: 100
+  torqueForce: 10
+  altitudeForce: 0
 --- !u!1 &8436738378004751223
 GameObject:
   m_ObjectHideFlags: 0
