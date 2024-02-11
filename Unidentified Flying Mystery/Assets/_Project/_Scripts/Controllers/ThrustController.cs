@@ -14,6 +14,19 @@ public class ThrustController : Observable, IInputReceiver
     private float rawLeftThrustInput;
     private float rawRightThrustInput;
     private float rawAltitudeInput;
+    private float thrustValue
+    {
+        get;
+        set;
+    }
+    private float activeThrust
+    {
+        set
+        {
+            thrustValue = value;
+            NotifyObservers(new ThrustPower(thrustValue));
+        }
+    }
 
     private Rigidbody body;
     
@@ -35,11 +48,13 @@ public class ThrustController : Observable, IInputReceiver
     private void OnLeftThrusterInputChange(float input)
     {
         rawLeftThrustInput = input;
+        activeThrust = rawLeftThrustInput + rawRightThrustInput;
     }
 
     private void OnRightThrusterInputChange(float input)
     {
         rawRightThrustInput = input;
+        activeThrust = rawLeftThrustInput + rawRightThrustInput;
     }
 
     private void OnAltitudeInputChange(float input)
@@ -80,5 +95,15 @@ public class ThrustController : Observable, IInputReceiver
         if (direction == 0) 
             return;
         body.AddTorque(0, direction * torqueForce, 0, ForceMode.Acceleration);
+    }
+
+    public struct ThrustPower : INotification
+    {
+        public float Thrust { get; }
+
+        public ThrustPower(float thrust)
+        {
+            Thrust = thrust;
+        }
     }
 }
